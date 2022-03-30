@@ -4,18 +4,11 @@ import { CoursesService } from "./app/courses.service";
 
 @Component({
     selector: 'courses',
-    template: `{{course.title | uppercase}} <br>
-    {{course.students | number}} <br> 
-    {{course.rating | number: '2.2-3'}} <br>
-    {{course.price | currency: 'EUR':'symbol' }} <br>
-    {{course.releaseDate | date: 'shortDate'}}`  // kai sketo date einai: May, 2, 2016
+    template: `{{text | summary }}`
 })
 export class CoursesComponent {
-    course = {
-        title: "The complete Angular course",
-        students: 30123,
-        rating: 4.9745,
-        price: 190.95,
-        releaseDate: new Date(2016,2,3)
-    }
+    text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit commodi beatae alias mollitia illo, 
+    doloremque vitae quis. Modi exercitationem recusandae eaque voluptatem velit amet illum obcaecati explicabo atque
+     tenetur, accusantium labore fuga, neque tempore. Architecto neque fugit ipsa molestiae dicta recusandae, cum 
+     corrupti rerum at, provident voluptatibus nostrum in.`;
 }
