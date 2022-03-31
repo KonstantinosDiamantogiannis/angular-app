@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSumbit)="submit(f)">
+<form #f="ngForm" (ngSubmit)="submit(f)">
     <div class="form-group">
         <label for="firstname">Firstname</label>
         <input
@@ -35,5 +35,17 @@
 
         </textarea>
     </div>
+    <div class="checkbox">
+        <label for="">
+            <input
+                ngModel
+                name="isAgreed"
+                #isAgreed="ngModel" 
+                type="checkbox">
+                I agree with Terms & Conditions
+        </label>
+    </div>
     <button class="btn btn-primary">Submit</button>
 </form>
+
+<p>{{f.value | json}}</p>
